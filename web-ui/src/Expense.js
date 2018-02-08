@@ -5,7 +5,7 @@ class Expense extends Component {
     state = {
         transaction: null,
         category: null,
-        isMonthly: false
+        isDebenture: false
     };
 
     handleChangeInput = event => {
@@ -14,13 +14,13 @@ class Expense extends Component {
 
     handleEnter = () => {
         const { onSubmit } = this.props;
-        const { transaction, category, isMonthly } = this.state;
-        onSubmit(-1 * Math.abs(parseFloat(transaction)), category, isMonthly);
-        this.setState({ transaction: null, category: null, isMonthly:false });
+        const { transaction, category, isDebenture } = this.state;
+        onSubmit(-1 * Math.abs(parseFloat(transaction)), category, isDebenture);
+        this.setState({ transaction: null, category: null, isDebenture:false });
     }
 
     render() {
-        const { transaction, category, isMonthly } = this.state;
+        const { transaction, category, isDebenture } = this.state;
         return (
             <div className="container">
                 <div className="row justify-content-center">
@@ -44,11 +44,11 @@ class Expense extends Component {
                         <div className="form-check">
                             <input type="checkbox" 
                             className="form-check-input"
-                             id="isMonthly"
-                             name="isMonthly"
+                             id="isDebenture"
+                             name="isDebenture"
                              onChange={this.handleChangeInput}
-                             checked={isMonthly} />
-                            <label className="form-check-label" htmlFor="isMonthly">Обязательныйй платеж</label>
+                             checked={isDebenture} />
+                            <label className="form-check-label" htmlFor="isDebenture">Обязательныйй платеж</label>
                         </div>
                         <button type="submit"
                             className="btn btn-default mt-2"
