@@ -1,7 +1,9 @@
-$font-stack:    Helvetica, sans-serif
+$font-stack:  'Open Sans', sans-serif;
 $primary-color: white
 $background-color: #71AE51
 $background-image: linear-gradient(to bottom right, #449CD7 1%, #8B4593 15%, #CF4845 25%, #E6873B 40%, #F3BA4B 70%, #71AE51 100%);
+
+@import 'Fa';
 
 body
   font: 100% $font-stack
@@ -9,6 +11,7 @@ body
   background-color: $background-color
   background-image: $background-image
   background-attachment: fixed;
+
 
 .btn-circle 
     width: 30px;
@@ -18,6 +21,19 @@ body
     text-align: center;
     font-size: 12px;
     line-height: 1.42857;
+
+.dropdown-menu
+  background: none
+
+.dropdown-item
+  color: white
+
+.avatar
+    border-radius: 50%;
+
+.company-logo-img
+  max-width: 200px;
+  max-height: 50px;
 
 .app-nav 
   display: flex;
@@ -42,7 +58,13 @@ body
       color: #fff;
       background-color: #8B4542;
       border-color: #8B4542
-     
-   
+
+.footer
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    
+
 
      
