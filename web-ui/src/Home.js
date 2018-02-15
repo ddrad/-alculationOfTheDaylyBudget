@@ -8,14 +8,13 @@ class Home extends Component {
     constructor(props) {
         super(props);
     }
-
+    
     render() {
         const experienceList = fetchExperienceData();
-        console.log(experienceList);
         return (
             <div>
                 <div className="container">
-                    <section id="experience">
+                    <section id="greating">
                         <header>
                             <h1>Dmitrii Azarov - Software Developer</h1>
                             <div className="row mt-5">
@@ -40,7 +39,7 @@ class Home extends Component {
                 </div>
                 <div className="white-block">
                     <div className="container">
-                        <section>
+                        <section id="experience">
                             <header>
                                 <h1>Experience:</h1>
                             </header>

@@ -1,69 +1,80 @@
-$font-stack:  'Open Sans', sans-serif;
+$font-stack:  'Open Sans', sans-serif
 $primary-color: white
 $background-color: #71AE51
-$background-image: linear-gradient(to bottom right, #449CD7 1%, #8B4593 15%, #CF4845 25%, #E6873B 40%, #F3BA4B 70%, #71AE51 100%);
+$background-image: linear-gradient(to bottom right, #449CD7 1%, #8B4593 15%, #CF4845 25%, #E6873B 40%, #F3BA4B 70%, #71AE51 100%)
 
-@import 'Fa';
+@import 'Fa'
 
 body
   font: 100% $font-stack
   color: $primary-color
   background-color: $background-color
   background-image: $background-image
-  background-attachment: fixed;
+  background-attachment: fixed
+  margin: 0
+  padding: 0
 
 
 .btn-circle 
-    width: 30px;
-    height: 30px;
-    padding: 6px 0px;
-    border-radius: 15px;
-    text-align: center;
-    font-size: 12px;
-    line-height: 1.42857;
+    width: 30px
+    height: 30px
+    padding: 6px 0px
+    border-radius: 15px
+    text-align: center
+    font-size: 12px
+    line-height: 1.42857
 
 .dropdown-menu
   background: none
-
-.dropdown-item
+  border: none
+  
+%dropdown-item-action
+  background: none 
   color: white
 
+.dropdown-item
+  color: rgba(255,255,255,.5)
+  &:focus
+     @extend %dropdown-item-action
+  &:hover
+     @extend %dropdown-item-action
+
 .avatar
-    border-radius: 50%;
+    border-radius: 50%
 
 .company-logo-img
-  max-width: 200px;
-  max-height: 50px;
+  max-width: 200px
+  max-height: 50px
 
 .app-nav 
-  display: flex;
-  justify-content: center;
-  font-size: 25px;
-  padding: 40px 0 15px;
+  display: flex
+  justify-content: center
+  font-size: 25px
+  padding: 40px 0 15px
   span
-    font-family: 'Marmelad';
-    cursor: pointer;
-    color: white;
-    margin: 0 8px;
+    font-family: 'Marmelad'
+    cursor: pointer
+    color: white
+    margin: 0 8px
     &.selected
-      border-bottom: 1px solid white;
+      border-bottom: 1px solid white
 
 .white-block
-  background-color: white;
-  color: buttontext;
+  background-color: white
+  color: buttontext
 
 .table
   .thead-color
     th 
-      color: #fff;
-      background-color: #8B4542;
+      color: #fff
+      background-color: #8B4542
       border-color: #8B4542
 
 .footer
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    line-height: 60px;
+    bottom: 0
+    width: 100%
+    height: 60px
+    line-height: 60px
     
 
 

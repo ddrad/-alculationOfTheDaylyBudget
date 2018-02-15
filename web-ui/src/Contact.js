@@ -5,22 +5,22 @@ class Contact extends Component {
     render() {
         return (
             <div className="container">
-                <section id="experience">
+                <section id="contacts">
                     <header>
-                        <h1>Contacts</h1>
+                        <h1>Contacts:</h1>
                         <div className="row mt-5">
                             <div className="col-md-3 pl-5">
-                                <div className="row">
-                                    <a href="#" class="fa fa-google"></a>
+                                <div className="row mt-2">
+                                    <a href="#" className="fa fa-google"></a>
                                 </div>
-                                <div className="row">
-                                    <a href="#" class="fa fa-linkedin"></a>
+                                <div className="row mt-2">
+                                    <a href="#" className="fa fa-linkedin"></a>
                                 </div>
-                                <div className="row">
-                                    <a href="#" class="fa fa-skype"></a>
+                                <div className="row mt-2">
+                                    <a href="#" className="fa fa-skype"></a>
                                 </div>
-                                <div className="row">
-                                    <a href="#" class="fa fa-instagram"></a>
+                                <div className="row mt-2">
+                                    <a href="#" className="fa fa-instagram"></a>
                                 </div>
                             </div>
                             <div className="col-md-3">
