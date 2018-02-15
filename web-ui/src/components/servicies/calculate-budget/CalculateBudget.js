@@ -8,6 +8,7 @@ class CalculateBudget extends Component {
 
   constructor(props) {
     super(props);
+    this._isService = true;
     let storageState = localStorage.getItem('calculateBudget');
     let initState;
 

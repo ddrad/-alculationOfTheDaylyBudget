@@ -7,13 +7,16 @@ class Home extends Component {
 
     constructor(props) {
         super(props);
+        console.log(this);
+       // this.props.serviceRedux.isService = false;
+        //console.log(this.props.serviceRedux.isService);
     }
     
     render() {
         const experienceList = fetchExperienceData();
         return (
             <div>
-                <div className="container">
+                <div className="container mt-6">
                     <section id="greating">
                         <header>
                             <h1>Dmitrii Azarov - Software Developer</h1>

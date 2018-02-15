@@ -24,20 +24,37 @@ body
     font-size: 12px
     line-height: 1.42857
 
+
+.navbar-toggler-right
+    position: fixed
+    right: 1rem
+    top: 1rem
+    z-index: 5
+
+.navbar-callapse-hide-top
+  top: -16px
+  z-index: 1
+
 .dropdown-menu
   background: none
   border: none
   
 %dropdown-item-action
   background: none 
-  color: white
+  color: rgba(0,0,0,.9);
 
 .dropdown-item
-  color: rgba(255,255,255,.5)
+  color: rgba(0,0,0,.5)
   &:focus
      @extend %dropdown-item-action
   &:hover
      @extend %dropdown-item-action
+
+.mt-6
+  margin-top:4rem!important
+
+.my-6
+   @extend .mt-6
 
 .avatar
     border-radius: 50%
