@@ -1,14 +1,14 @@
 import App from './App';
 import { connect } from 'react-redux';
-import { activateService, disactiveService } from '../redux/redux';
+import { activateServiceMenu, disactiveServiceMenu } from '../redux/redux';
 
 const mapStateToProps = (state, ownProps) => ({
-    serviceRedux: state.serviceRedux,
+    navReducer: state.navMenuReducer,
 });
 
 const mapDispatchToProps = {
-    activateService,
-    disactiveService,
+    activateServiceMenu,
+    disactiveServiceMenu,
 };
 
 const AppContainer = connect(

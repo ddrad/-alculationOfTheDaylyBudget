@@ -9,13 +9,13 @@ class App extends Component {
     constructor(props) {
         super(props);
         console.log(this);
-        this.props.serviceRedux.isService = true;
+       // this.props.serviceRedux.isService = true;
     }
 
     render() {
         return (
             <div>
-                <Header />
+                <Header isService={this.props.navReducer.service} />
                 <Main />
                 <Footer />
             </div>

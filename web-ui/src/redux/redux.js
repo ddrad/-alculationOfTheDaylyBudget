@@ -1,29 +1,28 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 
 // actions.js
-export const activateService = geod => ({
+export const activateServiceMenu = () => ({
     type: 'SERVICE',
-    serviceRedux,
 });
 
-export const disactiveService = () => ({
+export const disactiveServiceMenu = () => ({
     type: 'HOME',
 });
 
 // reducers.js
-export const serviceRedux = (state = {}, action) => {
+export const navMenuReducer = (state = {service : false}, action) => {
     switch (action.type) {
         case 'SERVICE':
-            return action.serviceRedux;
+            return {service: true}
         case 'HOME':
-            return {};
+            return {service: false}
         default:
             return state;
     }
 };
 
 export const reducers = combineReducers({
-    serviceRedux,
+    navMenuReducer,
 });
 
 // store.js

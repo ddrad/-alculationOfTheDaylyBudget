@@ -17,14 +17,14 @@ class Header extends Component {
     }
 
     render() {
-        console.log(this);
+        const {service} = this.props;
         return (
             <div>
                 <nav className="navbar fixed-top navbar-light bg-faded white-block navbar-callapse-hide-top">
                     <div className="collapse navbar-collapse" id="navbarNavDropdown">
                         <ul className="navbar-nav pt-2">
 
-                            {this._isService ? <HeaderCV /> :
+                            {!service ? <HeaderCV /> :
                                 <li className="nav-item">
                                     <a className="nav-link" href="/">Home</a>
                                 </li>
