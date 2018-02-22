@@ -8,10 +8,8 @@ class Home extends Component {
     constructor(props) {
         super(props);
         console.log(this);
-       // this.props.serviceRedux.isService = false;
-        //console.log(this.props.serviceRedux.isService);
     }
-    
+
     render() {
         const experienceList = fetchExperienceData();
         return (

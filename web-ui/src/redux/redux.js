@@ -1,5 +1,9 @@
 import { applyMiddleware, combineReducers, createStore } from 'redux';
 
+const initialState = {
+  service: false
+};
+
 // actions.js
 export const activateServiceMenu = () => ({
     type: 'SERVICE',
@@ -10,7 +14,7 @@ export const disactiveServiceMenu = () => ({
 });
 
 // reducers.js
-export const navMenuReducer = (state = {service : false}, action) => {
+export const navMenuReducer = (state = initialState, action) => {
     switch (action.type) {
         case 'SERVICE':
             return {service: true}
@@ -26,8 +30,8 @@ export const reducers = combineReducers({
 });
 
 // store.js
-export function configureStore(initialState = {}) {
-    const store = createStore(reducers, initialState);
+export function configureStore() {
+    const store = createStore(reducers);
     return store;
 };
 

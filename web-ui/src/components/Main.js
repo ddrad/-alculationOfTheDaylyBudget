@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import {Switch, Route} from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Home from './Home';
 import CalculateBudget from './servicies/calculate-budget/CalculateBudget';
 
 class Main extends Component {
 
     render() {
+        console.log(this);
+       
         return (
             <Switch>
                 <Route exact path='/' component={Home} />

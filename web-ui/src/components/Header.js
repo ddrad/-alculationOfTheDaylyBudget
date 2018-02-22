@@ -17,6 +17,7 @@ class Header extends Component {
     }
 
     render() {
+        console.log(this);
         const {service} = this.props;
         return (
             <div>
