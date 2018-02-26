@@ -6,11 +6,13 @@ import Footer from './Footer';
 import { connect } from 'react-redux';
 import { activateServiceMenu, disactiveServiceMenu } from '../redux/redux';
 
+
 class App extends Component {
 
     constructor(props) {
         super(props);
-        console.log(this);
+        console.log('*** ', process.env.DB_HOST);
+        console.log('*** ', process.env);
     }
 
     render() {
