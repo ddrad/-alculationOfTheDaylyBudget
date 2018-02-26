@@ -3,6 +3,8 @@ import './App.sass';
 import Main from './Main';
 import Header from './Header';
 import Footer from './Footer';
+import { connect } from 'react-redux';
+import { activateServiceMenu, disactiveServiceMenu } from '../redux/redux';
 
 class App extends Component {
 
@@ -14,7 +16,7 @@ class App extends Component {
     render() {
         return (
             <div>
-                <Header isService={this.props.navReducer.service} />
+                <Header isService={this.props.nav.service} />
                 <Main />
                 <Footer />
             </div>
@@ -22,4 +24,13 @@ class App extends Component {
     }
 }
 
-export default App;
+const mapStateToProps = (state, ownProps) => ({
+    nav: state.navMenuReducer,
+});
+
+const mapDispatchToProps = {
+    activateServiceMenu,
+    disactiveServiceMenu,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App); 

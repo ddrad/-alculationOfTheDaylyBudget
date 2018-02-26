@@ -3,13 +3,17 @@ import moment from 'moment';
 import Incomes from './Incomes';
 import Expense from './Expense';
 import Detalisation from './Detalisation';
+import { connect } from 'react-redux';
+import { store } from '../../../redux/redux';
 
 class CalculateBudget extends Component {
 
   constructor(props) {
     super(props);
+    store.dispatch({ type: 'SERVICE' });
     let storageState = localStorage.getItem('calculateBudget');
     let initState;
+    console.log(this);
 
     if (storageState != null) {
       storageState = JSON.parse(storageState);
@@ -164,4 +168,13 @@ class CalculateBudget extends Component {
   }
 }
 
-export default CalculateBudget;
+// const mapStateToProps = (state, ownProps) => ({
+//   nav: state.navMenuReducer,
+// });
+
+// const mapDispatchToProps = {
+//   activateServiceMenu,
+//   disactiveServiceMenu,
+// };
+
+export default CalculateBudget; // connect(mapStateToProps, mapDispatchToProps)(CalculateBudget);

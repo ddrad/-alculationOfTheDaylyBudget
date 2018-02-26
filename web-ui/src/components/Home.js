@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import Experience from './cv/Experience';
 import Contact from './Contact';
 import fetchExperienceData from './cv/ExperienceStore';
+import { connect } from 'react-redux';
+import { store } from '../redux/redux';
 
 class Home extends Component {
 
     constructor(props) {
         super(props);
+        store.dispatch({ type: 'HOME' });
         console.log(this);
     }
 
@@ -57,4 +60,13 @@ class Home extends Component {
     }
 }
 
-export default Home;
+// const mapStateToProps = (state, ownProps) => ({
+//     nav: state.navMenuReducer,
+// });
+
+// const mapDispatchToProps = {
+//     activateServiceMenu,
+//     disactiveServiceMenu,
+// };
+
+export default Home; //connect(mapStateToProps, mapDispatchToProps)(Home); 
