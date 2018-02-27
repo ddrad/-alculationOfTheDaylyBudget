@@ -21,13 +21,13 @@ class Contact extends Component {
                         <div className="row mt-5">
                             <div className="col-md-3 pl-5">
                                 <div className="row mt-2">
-                                    <a href="mailto:mr.azaroff@gmail.com?subject=Sent from web cv" className="fa fa-google"></a>
+                                    <a href={process.env.REACT_APP_MAIL} className="fa fa-google"></a>
                                 </div>
                                 <div className="row mt-2">
                                     <a href="https://www.linkedin.com/in/dmitry-azarov-47b9b8105" className="fa fa-linkedin"></a>
                                 </div>
                                 <div className="row mt-2">
-                                    <a href="skype:{process.env.REACT_APP_MAIL}?chat" className="fa fa-skype"></a>
+                                    <a href={process.env.REACT_APP_SKYPE_ID} className="fa fa-skype"></a>
                                 </div>
                                 <div className="row mt-2">
                                     <a href="https://www.instagram.com/mr.azaroff/" className="fa fa-instagram"></a>
